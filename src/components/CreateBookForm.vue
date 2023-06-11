@@ -14,6 +14,7 @@
 
 <script>
 import { ref } from 'vue'
+import getUser from '../composables/getUser'
 
 // firebase imports
 import { db } from '../firebase/config'
@@ -21,6 +22,7 @@ import { addDoc, collection } from 'firebase/firestore'
 
 export default {
   setup() {
+    const { user } = getUser()
     const title = ref('')
     const author = ref('')
 
@@ -30,8 +32,10 @@ export default {
       await addDoc(collectionRef, {
         title: title.value,
         author: author.value,
-        isFavourite: false
+        isFavourite: false,
+        userUid: user.value.uid
       })
+
       // reset the form
       title.value = ''
       author.value = ''
