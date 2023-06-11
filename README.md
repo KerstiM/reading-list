@@ -56,8 +56,21 @@ Create `config.js` :
 
 install Firebase -> `npm install firebase`
 
-
+#### Firestore collections
 Create a new collection in Cloud Firestore
 Add initial documents and use auto-id
 
+#### Authentication
+Enable email and password authentication
+
+Initialize authentication in front end `firebase/config.js` -> 
+
+```
+  import { getAuth } from 'firebase/auth'
+
+  // init services
+  const auth = getAuth()
+
+  export { db, auth }
+```
 
