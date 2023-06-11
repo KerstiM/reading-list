@@ -57,4 +57,7 @@ Create `config.js` :
 install Firebase -> `npm install firebase`
 
 
+Create a new collection in Cloud Firestore
+Add initial documents and use auto-id
+
 
