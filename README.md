@@ -74,3 +74,14 @@ Initialize authentication in front end `firebase/config.js` ->
   export { db, auth }
 ```
 
+#### Hosting
+Build -> Hosting -> Get Started
+`npm install -g firebase-tools`
+firebase login
+firebase init
+
+npm run build
+
+firebase deploy
+
+Open a link in the hosting page
