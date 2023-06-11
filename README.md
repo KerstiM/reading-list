@@ -85,3 +85,21 @@ npm run build
 firebase deploy
 
 Open a link in the hosting page
+
+#### Rules
+
+Create a file in the root: `firebase.rules`
+Edit rules
+Update `firebase.json` -> 
+
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexses": "firestore.indexses.json"
+  },
+
+`firebase deploy --only firestore:rules`
+
+ #### Lock down API key to one domain
+ `console.developer.google.com``
+
+Credentials -> Browser key -> Set an application restriction -> Websites -> Add -> `https://fir-9-reading-list-a6a5a.web.app/`
